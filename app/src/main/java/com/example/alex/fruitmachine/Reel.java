@@ -37,5 +37,8 @@ public class Reel {
         return collection.get(0);
     }
 
+    public int getReelValue(){
+        return getFirst().getRankValue();
+    }
 
 }

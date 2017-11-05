@@ -25,7 +25,7 @@ public class TestReel {
 
     @Test
     public void testGetFirst(){
-        assertEquals(SymbolRank.APPLE.getValue(), reel.getFirst().getRankValue());
+        assertEquals(SymbolRank.APPLE.getValue(), reel.getReelValue());
     }
 
 

@@ -20,6 +20,9 @@ public class TestFruitMachine {
     @Before
     public void before(){
         fruitMachine = new FruitMachine("Clover's Run", 500);
+        reel1 = new Reel();
+        reel2 = new Reel();
+        reel3 = new Reel();
         fruitMachine.addReel(reel1);
         fruitMachine.addReel(reel2);
         fruitMachine.addReel(reel3);
@@ -29,6 +32,17 @@ public class TestFruitMachine {
     public void testNumberOfReel(){
         assertEquals(3, fruitMachine.getDisplay().size());
     }
+
+    @Test
+    public void testGetReelValue(){
+        assertEquals(1, fruitMachine.getReelValue(reel1));
+    }
+
+//    @Test
+//    public void testSpin(){
+//        assertEquals(3, fruitMachine.spin());
+//    }
+
 
 
 }
