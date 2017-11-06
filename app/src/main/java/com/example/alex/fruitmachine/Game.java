@@ -28,7 +28,9 @@ public class Game {
     }
 
     public void movesFunds(){
-        player.addWinnings(fruitMachine.spin());
+        if(fruitMachine.checkThreeWin() == true){
+            player.addWinnings(fruitMachine.getDisplay().get(0).getReelValue());
+        }
         System.out.println("Player has " + player.getFunds() + " remaining in his bank");
     }
 
